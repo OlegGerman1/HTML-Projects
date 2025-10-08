@@ -98,10 +98,10 @@ export function js(){
 
 export function fonts(){
     if(fs.existsSync('./src/fonts/')){
-        return gulp.src('./src/fonts/**/*')
+        return gulp.src('./src/fonts/**/*.ttf', { encoding: false })
         .pipe(gulpIf(!argv.prod, changed('./dist/fonts/')))
         .pipe(ttf2woff2())
-        .pipe(gulp.dest('./dist/fonts/'))
+        .pipe(gulp.dest('dist/fonts/'))
         .pipe(gulpIf(!argv.prod, browserSync.stream()))
     }
     return Promise.resolve();
