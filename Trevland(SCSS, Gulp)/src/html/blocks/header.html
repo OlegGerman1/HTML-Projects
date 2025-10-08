@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Trevland</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__container">
+                    <div class="header__logo">
+                        <a class="js-scroll" href="#hero">Trevland</a>
+                    </div>
+                    <div class="header__burger">
+                        <span></span>
+                    </div>
+                    <div class="header__nav-btn">
+                        <nav class="header__nav">
+                            <ul>
+                                <li><a class="js-scroll" href="#popular-location">Popular Location</a></li>
+                                <li><a class="js-scroll" href="#special-offers">Special Offers</a></li>
+                                <li><a class="js-scroll" href="#blog">From Blog & News</a></li>
+                            </ul>
+                        </nav>
+                        <button class="btn popup__button" id="popup__button">Booking now</button>
+                    </div>
+                    <div class="popup" id="popup">
+                        <div class="popup__body">
+                            <h5 class="popup__title">Book now:</h5>
+                            <form class="popup__form" action="/" method="GET">
+                                <input name="name" class="popup__input" type="text" placeholder="Name">
+                                <input name="email" class="popup__input" type="email" placeholder="Email">
+                                <button class="btn btn--sm popup__submit" type="submit">Book</button>
+                            </form>
+                            <div class="popup__close" id="popup__close">&#10006</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">

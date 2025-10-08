@@ -1,0 +1,139 @@
+.footer{
+    background-color: $light-green;
+    padding-block: 70px 78px;
+    font-size: 16px;
+    letter-spacing: 0.06em;
+
+    @include media-max-width($md){
+        padding-block: 50px 58px;
+    }
+
+    @include media-max-width($xxs){
+        padding-block: 30px 38px;
+    }
+
+    &__wrapp{
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 30px;
+
+        @include media-max-width($md){
+            row-gap: 30px;
+        }
+
+        @include media-max-width($xxs){
+            row-gap: 30px;
+        }
+    }
+
+    &__contacts{
+        flex: 0 1 calc(((100% / 12) * 3) - 22.5px);
+
+        @include media-max-width($md){
+            flex: 0 1 calc(50% - 15px);
+        }
+
+        @include media-max-width($xxs){
+            flex: 0 1 100%;
+        }
+
+        .footer__logo{
+            font-family: 'Ribeye', sans-serif;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 1.5;
+            letter-spacing: 0.06em;
+            color: $black;
+            margin-bottom: 40px;
+
+             @include media-max-width($xs){
+                margin-bottom: 26px;
+            }
+        }
+
+        .footer__contact-us{
+            font-size: 16px;
+            margin-bottom: 20px;
+
+            & > *:not(:last-child){
+                margin-bottom: 10px;
+            }
+        }
+
+        .footer__social{
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 27px;
+
+            img{
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+    &__menu{
+        flex: 0 1 calc((100% / 12 * 2.5) - 22.5px );
+
+        @include media-max-width($md){
+            flex: 0 1 calc(50% - 15px);
+        }
+
+        @include media-max-width($xxs){
+            flex: 0 1 100%;
+        }
+        
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            row-gap: 20px;
+            font-weight: 600;
+
+            @include media-max-width($xs){
+                row-gap: 14px;
+            }
+        }
+    }
+
+    &__subscribe{
+        flex: 0 1 calc((100% / 12 * 4) - 22.5px );
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        row-gap: 42px;
+
+        @include media-max-width($md){
+            flex: 0 1 calc(50% - 15px);
+            row-gap: 32px;
+        }
+
+        @include media-max-width($xs){
+            flex: 0 1 100%;
+            row-gap: 15px;
+        }
+
+        div{
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        input[type="text"]{
+            width: 195px;
+            border-radius: 5px;
+            border: 1px solid rgb($black, .1);
+            padding: 9px 20px;
+            line-height: 1.5;
+            margin-bottom: 10px;
+
+            &::placeholder{
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 1.5;
+                letter-spacing: 0.06em;
+                color: rgb($black, .2);
+            }
+        }
+    }
+}

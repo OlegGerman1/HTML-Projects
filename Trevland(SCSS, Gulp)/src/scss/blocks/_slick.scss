@@ -1,0 +1,59 @@
+.slick-dots{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-dot{
+    display: inline-block;
+    width: 75px;
+    height: 5px;
+    background-color: lighten($red, 45);
+    border-radius: 10px;
+    margin: 0 5px;
+    @include transition(background-color);
+
+    @include media-max-width($lg){
+        width: 60px;
+    }
+
+    @include media-max-width($md){
+        width: 40px;
+    }
+
+    @include media-max-width($sm){
+        width: 30px;
+    }
+
+    @include media-max-width($xs){
+        width: 10px;
+    }
+}
+
+.slick-dots li.slick-active .custom-dot {
+    background-color: $red;
+}
+
+.slider-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 52px;
+
+    @include media-max-width($sm){
+        gap: 20px;
+        margin-top: 26px;
+    }
+}
+
+.slick-dots li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow-left, .arrow-right{
+    cursor: pointer;
+    padding: 8px;
+}
