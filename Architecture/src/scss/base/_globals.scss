@@ -1,0 +1,132 @@
+html{
+    scroll-behavior: smooth;
+}
+
+html, body{
+    min-height: 100vh;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+body{
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-size: $font-size;
+    color: $white;
+    line-height: $line-height;
+    overflow-x: hidden;
+}
+
+.main{
+    flex-grow: 1;
+}
+
+.footer{
+    flex-grow: 0;
+}
+
+.lock{
+    overflow: hidden;
+}
+
+.container{
+    max-width: $container-width;
+    padding-inline: $container-padding-inline;
+    margin: 0 auto;
+    min-width: $container-min-width;
+}
+
+.section{
+    padding: 150px 0;
+
+    @include media-max-width($md){
+        padding: 120px 0;
+    };
+
+    @include media-max-width($sm){
+        padding: 50px 0;
+    };
+}
+
+h1{
+    font-size: 85px;
+    text-transform: uppercase;
+    line-height: 1.17;
+    max-width: 835px;
+
+    @include media-max-width($sm){
+        font-size: 54px;
+    };
+
+    @include media-max-width($xs){
+        font-size: 42px;
+    };
+
+    @include media-max-width($xxs){
+        font-size: 38px;
+    };
+
+}
+
+h2{
+    font-size: 42px;
+    font-weight: 300;
+    color: $white;
+    text-transform: uppercase;
+    line-height: 1.16;
+
+    @include media-max-width($sm){
+        font-size: 28px;
+    };
+}
+
+h3{
+    font-size: 28px;
+    font-weight: 300;
+    color: $white;
+    text-transform: uppercase;
+    line-height: 1.5;
+
+    @include media-max-width($sm){
+        font-size: 20px;
+    };
+}
+
+h4{
+    font-size: 24px;
+    font-weight: 300;
+    color: $white;
+    text-transform: uppercase;
+    line-height: 1.5;
+
+    @include media-max-width($xs){
+        font-size: 18px;
+    };
+}
+
+h5{
+    font-size: 18px;
+    font-weight: 300;
+    color: $white;
+    text-transform: uppercase;
+    line-height: 1.5;
+
+    @include media-max-width($xs){
+        font-size: 16px;
+    };
+}
+
+.section__title{
+    margin-bottom: 55px;
+
+    @include media-max-width($md){
+        margin-bottom: 45px;
+    };
+
+    @include media-max-width($sm){
+        margin-bottom: 20px;
+    };
+}

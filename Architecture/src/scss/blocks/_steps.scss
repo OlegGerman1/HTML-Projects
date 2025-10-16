@@ -1,0 +1,99 @@
+.steps{
+    display: flex;
+    padding: 60px 0 100px;
+    background-color: $bg-black;
+
+    @include media-max-width($lg){
+        display: block;
+    };
+
+    @include media-max-width($sm){
+        padding: 50px 0;
+    };
+
+    &__title{
+        max-width: 566px;
+    }
+
+    &__list{
+        max-width: 566px;
+        list-style: none;
+        counter-reset: my-counter;
+
+        @include media-max-width($lg){
+            padding-bottom: 40px;
+        };
+    }
+
+    &__item{
+        counter-increment: my-counter;
+        padding-left: 57px;
+        position: relative;
+        padding-bottom: 40px;
+
+        @include media-max-width($xs){
+            padding-left: 30px;
+        };
+
+        &::before{
+            content: counter(my-counter);
+            width: 40px;
+            height: 40px;
+            border: 1px solid $white;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            left: 0;
+
+            @include media-max-width($xs){
+                width: 20px;
+                height: 20px;
+                font-size: 12px;
+                top: 4px;
+            };
+        }
+
+        &::after{
+            content: '';
+            position: absolute;
+            width: 1px;
+            background-color: $white;
+            left: 20px;
+            top: 48px;
+            bottom: 8px;
+
+            @include media-max-width($xs){
+                left: 10px;
+                top: 34px;
+                bottom: 8px;
+            };
+        }
+
+        &:last-child{
+            padding-bottom: 0;
+
+            &::after{
+                display: none;
+            }
+        }
+
+        h4{
+            padding-top: 2px;
+            padding-bottom: 12px;
+
+        }
+    }
+
+    &__image{
+        img{
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

@@ -1,0 +1,147 @@
+.footer{
+    padding: 100px;
+    background-color: $black;
+
+    @include media-max-width($xl){
+        padding: 80px;
+    };
+
+    @include media-max-width($lg){
+        padding: 40px;
+    };
+
+    &__inner{
+        display: flex;
+        column-gap: 337px;
+        align-items: flex-end;
+
+        @include media-max-width($xl){
+            column-gap: 100px;
+        };
+
+        @include media-max-width($lg){
+            flex-direction: column;
+            align-items: center;
+        };
+
+        @include media-max-width($sm){
+            align-items: flex-start;
+        };
+    }
+
+    &__logo{
+        width: 235px;
+
+        @include media-max-width($lg){
+            width: 160px;
+            margin-bottom: 30px;
+        };
+
+        @include media-max-width($sm){
+            width: 100px;
+        };
+    }
+
+    &__info{
+        display: flex;
+        column-gap: 100px;
+        align-items: flex-end;
+        flex-wrap: wrap;
+
+        @include media-max-width($xl){
+            column-gap: 50px;
+        };
+
+        @include media-max-width($lg){
+            column-gap: 22px;
+        };
+
+        @include media-max-width($sm){
+            column-gap: 20px;
+            row-gap: 30px;
+            align-items: flex-start;
+        };
+
+        &-menu{
+            display: flex;
+            flex-direction: column;
+            row-gap: 15px;
+            font-size: 16px;
+            font-weight: 300;
+            text-transform: uppercase;
+            line-height: 1.5;
+
+            @include media-max-width($sm){
+                flex: 0 1 calc(50% - 10px);
+            };
+
+            @include media-max-width($xs){
+                flex: 0 1 100%;
+            };
+        }
+
+        &-social{
+            display: flex;
+            flex-direction: column;
+            row-gap: 15px;
+            line-height: 1.16;
+            font-size: 14px;
+            font-weight: 300;
+            a{
+                display: flex;
+                column-gap: 10px;
+                align-items: center;
+            }
+
+            img{
+                width: 20px;
+            }
+
+            span{
+                @include media-max-width($xs){
+                    display: none;
+                };
+            }
+
+            @include media-max-width($sm){
+                flex: 0 1 calc(50% - 10px);
+            };
+
+            @include media-max-width($xs){
+                flex: 0 1 100%;
+                flex-direction: row;
+                column-gap: 20px;
+            };
+        }
+
+        &-contacts{
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+            font-size: 14px;
+            font-weight: 300;
+
+            a{
+                display: flex;
+                column-gap: 8px;
+                align-items: center;
+            }
+
+            li:last-child{
+                padding-left: 27px;
+            }
+
+            img{
+                width: 20px;
+            }
+
+            @include media-max-width($sm){
+                flex: 0 1 calc(50% - 10px);
+            };
+
+             @include media-max-width($xs){
+                flex: 0 1 100%;
+            };
+        }
+    }
+}

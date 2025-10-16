@@ -69,10 +69,10 @@ export function html(){
 
 export function css(){
     return gulp.src('./src/scss/*.scss')
-    .pipe(sassGlob())
     .pipe(gulpIf(!argv.prod, changed('./dist/')))
-    //.pipe(gulpIf(!argv.prod, plumber(plumberNotify('SCSS'))))
+    .pipe(gulpIf(!argv.prod, plumber(plumberNotify('SCSS'))))
     .pipe(gulpIf(!argv.prod, sourceMap.init({loadMaps: true})))
+    .pipe(sassGlob())
     .pipe(sass())
     .pipe(autoprefixer({
         overrideBrowserslist: ['last 3 versions'],
@@ -109,7 +109,7 @@ export function fonts(){
 
 export function files(){
     if(fs.existsSync('./src/files/')){
-        return gulp.src('./src/files/**/*')
+        return gulp.src('./src/files/**/*', { encoding: false })
         .pipe(gulpIf(!argv.prod, changed('./dist/files/')))
         .pipe(gulp.dest('./dist/files'))
         .pipe(gulpIf(!argv.prod, browserSync.stream()))

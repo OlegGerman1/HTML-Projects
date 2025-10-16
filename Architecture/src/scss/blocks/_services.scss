@@ -1,0 +1,33 @@
+.services{
+    background-color: $black;
+
+    &__list{
+        border-top: 1px solid $white;
+
+
+        .services__item{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            padding: 24px 0;
+            border-bottom: 1px solid $white;
+            padding-right: 44px;
+
+            p{
+                font-size: 16px;
+                max-width: 800px;
+                width: 100%;
+            }
+
+            @include media-max-width($lg){
+                display: block;
+                padding-right: 0;
+            };
+
+            @include media-max-width($md){
+                padding: 16px 0;
+            };
+        }
+    }
+}

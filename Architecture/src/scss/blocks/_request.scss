@@ -1,0 +1,130 @@
+.request{
+    padding-bottom: 150px;
+
+    &__inner{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 730px;
+        background-image: url('images/request/bg-request.webp');
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @include media-max-width($lg){
+            height: 550px;
+        };
+
+        @include media-max-width($md){
+            margin-bottom: 30px;
+        };
+
+        @include media-max-width($sm){
+            height: 450px;
+        };
+
+        @include media-max-width($xs){
+            height: 350px;
+        };
+        
+
+        &-wrapper{
+            background-color: rgb(23, 23, 23, .85);
+            padding: 75px 117px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @include media-max-width($lg){
+                padding: 75px 80px;
+            };
+
+            @include media-max-width($sm){
+                padding: 50px 20px;
+            };
+        }
+
+        
+
+        &-body{
+            width: 765px;
+
+            @include media-max-width($md){
+                width: 100%;
+            };
+
+            h2{
+                margin-bottom: 55px;
+
+                @include media-max-width($md){
+                    margin-bottom: 30px;
+                    font-size: 34px;
+                };
+
+                @include media-max-width($sm){
+                    margin-bottom: 20px;
+                    font-size: 22px;
+                };
+
+                @include media-max-width($xs){
+                    margin-bottom: 10px;
+                    font-size: 20px;
+                };
+            }
+
+            form{
+                position: relative;
+
+                input[type="email"]{
+                    width: 100%;
+                    background-color:#d9d9d9;
+                    padding: 20px 33px;
+                    font-size: 18px;
+                    color: $black;
+
+                    &::placeholder{
+                        color: $black;
+                        font-size: 18px;
+                        font-weight: 100;
+                    }
+
+                    @include media-max-width($md){
+                        padding: 15px 20px;
+                    };
+
+                    @include media-max-width($sm){
+                        margin-bottom: 10px;
+                    };
+                }
+
+                button{
+                    background-color: #FFFFFF;
+                    color: $black;
+                    padding: 20px 52px;
+                    font-size: 18px;
+                    text-transform: uppercase;
+                    font-weight: 300;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+
+                    @include media-max-width($md){
+                        padding: 15px 20px;
+                    };
+
+                    @include media-max-width($sm){
+                        display: block;
+                        position: static;
+                        margin: 0 auto;
+                        padding: 10px 15px;
+                        font-size: 14px;
+                    };
+                }
+            }
+        }
+    }
+
+    @include media-max-width($sm){
+        padding-bottom: 50px;
+    };
+}
